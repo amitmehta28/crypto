@@ -1,0 +1,499 @@
+/* ======== C O M M O N S - C L A S S E S ======== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* 
+#scrollsmoother-container {
+    transition: height 3s;
+} */
+
+.viewport {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+span {
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+address {
+    font-style: normal;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.t-cenetr {
+    text-align: center;
+}
+
+.container {
+    max-width: 1570px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.big_container {
+    max-width: 1650px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    background: linear-gradient(116deg, #2F80ED 5.83%, #DE19DF 95.57%);
+    padding: 19px 36px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.solid-btn {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    background: #FFFFFF;
+    padding: 19px 36px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #2F80ED;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.solid-btn:hover {
+    background-color: #2F80ED;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.border_btn {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 19px 36px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #2F80ED;
+    white-space: nowrap;
+    border: 1px solid #2F80ED;
+}
+
+.border_btn:hover {
+    background-color: rgba(47, 128, 237, 0.10);
+}
+
+
+.bg-common {
+    background: url('../images/cryptoplanet-banner-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sec_spacing {
+    padding: 80px 0;
+}
+
+/* ======== H E A D I N G S ======== */
+
+.hero_heading {
+    color: #0C0910;
+    font-family: 'Inter', sans-serif;
+    font-size: 68px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sec_heading {
+    color: #0C0910;
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: capitalize;
+}
+
+.small_heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+    background: linear-gradient(116deg, #2F80ED 5.83%, #DE19DF 95.57%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+
+/* ======== T E X T S ======== */
+
+.body_text {
+    color: #4B4851;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    text-transform: capitalize;
+    cursor: context-menu;
+}
+
+.title {
+    color: #0C0910;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    cursor: context-menu;
+}
+
+
+/* Bubbles Floating Effects on Entire Page  */
+.bubbles_wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: hidden;
+    pointer-events: none
+}
+
+@-webkit-keyframes animateBubble {
+    0% {
+        margin-top: 20%
+    }
+
+    to {
+        margin-top: -30%
+    }
+}
+
+@-moz-keyframes animateBubble {
+    0% {
+        margin-top: 20%
+    }
+
+    to {
+        margin-top: -30%
+    }
+}
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 20%
+    }
+
+    to {
+        margin-top: -30%
+    }
+}
+
+@-webkit-keyframes sideWays {
+    0% {
+        margin-left: 0
+    }
+
+    to {
+        margin-left: 25px
+    }
+}
+
+@-moz-keyframes sideWays {
+    0% {
+        margin-left: 0
+    }
+
+    to {
+        margin-left: 25px
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        margin-left: 0
+    }
+
+    to {
+        margin-left: 25px
+    }
+}
+
+.x1 {
+    -webkit-animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 6%;
+    top: 45%;
+    background: #ffb739;
+}
+
+.x2 {
+    -webkit-animation: animateBubble 10s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    animation: animateBubble 10s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 5%;
+    top: 80%;
+    background: #fc4fdd;
+}
+
+.x3 {
+    -webkit-animation: animateBubble 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: animateBubble 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 10%;
+    top: 40%;
+    background: #5ed5cb
+}
+
+.x4 {
+    -webkit-animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    left: 20%;
+    top: 0;
+    background: #3de4a3;
+}
+
+.x5 {
+    -webkit-animation: animateBubble 19s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    animation: animateBubble 19s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 30%;
+    top: 50%;
+    background: #fc4fb1;
+}
+
+.x6 {
+    -webkit-animation: animateBubble 11s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: animateBubble 11s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 50%;
+    top: 0;
+    background: #2c4aff;
+}
+
+.x7 {
+    -webkit-animation: animateBubble 10s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: animateBubble 10s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 65%;
+    top: 70%;
+    background: #ffb739;
+}
+
+.x8 {
+    -webkit-animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    left: 80%;
+    top: 10%;
+    background: #8f3de4;
+}
+
+.x9 {
+    -webkit-animation: animateBubble 19s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    animation: animateBubble 19s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 90%;
+    top: 50%;
+    background: #fff339;
+}
+
+.x10 {
+    -webkit-animation: animateBubble 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: animateBubble 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 80%;
+    top: 80%;
+    background: #fc4f4f;
+}
+
+.bubble {
+    border-radius: 50%;
+    box-shadow: none;
+    height: 5px;
+    position: absolute;
+    width: 5px;
+}
+
+
+/* Scroll Bar Designed  */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+
+
+/* Round Circles Animations */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0turn) translateY(-135px) translateY(50%) rotate(1turn);
+        transform: rotate(0turn) translateY(-135px) translateY(50%) rotate(1turn)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn) translateY(-135px) translateY(50%) rotate(0turn);
+        transform: rotate(1turn) translateY(-135px) translateY(50%) rotate(0turn)
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0turn) translateY(-135px) translateY(50%) rotate(1turn);
+        transform: rotate(0turn) translateY(-135px) translateY(50%) rotate(1turn)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn) translateY(-135px) translateY(50%) rotate(0turn);
+        transform: rotate(1turn) translateY(-135px) translateY(50%) rotate(0turn)
+    }
+}
+
+@-webkit-keyframes spin2 {
+    0% {
+        -webkit-transform: rotate(0turn) translateY(-75px) translateY(50%) rotate(1turn);
+        transform: rotate(0turn) translateY(-75px) translateY(50%) rotate(1turn)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn) translateY(-75px) translateY(50%) rotate(0turn);
+        transform: rotate(1turn) translateY(-75px) translateY(50%) rotate(0turn)
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        -webkit-transform: rotate(0turn) translateY(-75px) translateY(50%) rotate(1turn);
+        transform: rotate(0turn) translateY(-75px) translateY(50%) rotate(1turn)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn) translateY(-75px) translateY(50%) rotate(0turn);
+        transform: rotate(1turn) translateY(-75px) translateY(50%) rotate(0turn)
+    }
+}
+
+.circle1e1,.circle1e2 {
+    border: 2px solid #cae5f7;
+    border-radius: 50%;
+    background-color: rgba(241,159,16,0);
+    width: 240px;
+    height: 240px;
+    padding: 0;
+    margin: 0
+}
+
+.circle1e1 span.moved,.circle1e2 span.moved {
+    background-color: #c6f6ec;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: calc(50% - 20px) auto 0;
+    border-radius: 50%;
+    -webkit-animation: spin 8s linear infinite;
+    animation: spin 8s linear infinite;
+    z-index: 2
+}
+
+.circle1e2 {
+    border-color: #cae5f7;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.circle1e2 span.moved {
+    background-color: #292b67;
+    -webkit-animation: spin2 5s linear infinite;
+    animation: spin2 5s linear infinite
+}
+
+.static-circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -6px;
+    top: 25px;
+    border-radius: 50%;
+    background: #3ccfe0;
+    z-index: 1;
+    display: block
+}
+
+
